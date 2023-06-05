@@ -80,56 +80,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView7" />
 
-    <LinearLayout
-        android:id="@+id/linearLayout"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_kategori"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="24dp"
-        android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView6">
-
-        <ImageView
-            android:id="@+id/ic_food"
-            android:layout_width="160dp"
-            android:layout_height="150dp"
-            android:src="@drawable/ic_food" />
-
-        <ImageView
-            android:id="@+id/ic_drink"
-            android:layout_width="160dp"
-            android:layout_height="150dp"
-            android:layout_marginLeft="25dp"
-            android:src="@drawable/ic_drink" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginTop="10dp"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
-
-        <ImageView
-            android:id="@+id/ic_furniture"
-            android:layout_width="160dp"
-            android:layout_height="150dp"
-            android:src="@drawable/ic_furniture" />
-
-        <ImageView
-            android:id="@+id/ic_school_equipment"
-            android:layout_width="160dp"
-            android:layout_height="150dp"
-            android:layout_marginLeft="25dp"
-            android:src="@drawable/ic_school_equipment" />
-    </LinearLayout>
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
