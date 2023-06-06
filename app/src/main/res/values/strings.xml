@@ -9,5 +9,6 @@
     <string name="profile_name">AryaFP</string>
     <string name="logout">Logout</string>
     <string name="profile_email">aryafito@gmail.com</string>
+    <string name="sudah_punya_akun">Sudah punya akun?</string>
     <!-- TODO: Remove or change this placeholder text -->
 </resources>

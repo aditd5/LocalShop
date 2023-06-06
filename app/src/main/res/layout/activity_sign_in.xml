@@ -8,7 +8,7 @@
     tools:context=".SignInActivity">
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/ivLogoSignin"
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:layout_marginStart="24dp"
@@ -17,10 +17,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/logo" />
+        android:src="@drawable/logo" />
 
     <EditText
-        android:id="@+id/etUsernamesu"
+        android:id="@+id/etEmailSu"
         android:layout_width="0dp"
         android:layout_height="50dp"
         android:layout_marginStart="24dp"
@@ -30,18 +30,18 @@
         android:ems="10"
         android:fontFamily="@font/roboto"
         android:gravity="center|start"
-        android:hint="@string/username"
-        android:inputType="text"
+        android:hint="@string/email"
+        android:inputType="textEmailAddress"
         android:paddingStart="15dp"
         android:textColorHint="@color/black"
         android:textSize="16sp"
         app:guidelineUseRtl="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+        app:layout_constraintTop_toBottomOf="@+id/ivLogoSignin" />
 
     <EditText
-        android:id="@+id/etPasswordsu"
+        android:id="@+id/etPasswordSu"
         android:layout_width="0dp"
         android:layout_height="50dp"
         android:layout_marginStart="24dp"
@@ -60,7 +60,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etUsernamesu" />
+        app:layout_constraintTop_toBottomOf="@+id/etEmailSu" />
 
     <Button
         android:id="@+id/btn_signin"
@@ -77,7 +77,7 @@
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etPasswordsu" />
+        app:layout_constraintTop_toBottomOf="@+id/etPasswordSu" />
 
     <TextView
         android:id="@+id/textView"

@@ -8,7 +8,9 @@
 
     <style name="Theme.LocalShop" parent="Base.Theme.LocalShop" />
 
-    <style name="MyButtonStyle"></style>
+    <style name="MyButtonStyle">
+
+    </style>
 
 
 </resources>
