@@ -20,7 +20,7 @@
         android:src="@drawable/logo" />
 
     <EditText
-        android:id="@+id/etEmail"
+        android:id="@+id/etEmailSu"
         android:layout_width="0dp"
         android:layout_height="50dp"
         android:layout_marginStart="24dp"
@@ -36,14 +36,14 @@
         android:textColorHint="@color/black"
         android:textSize="16sp"
         app:guidelineUseRtl="false"
-        app:layout_constraintBottom_toTopOf="@+id/etEmailSu"
+        app:layout_constraintBottom_toTopOf="@+id/etUsernameSu"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ivLogoSignup" />
 
     <EditText
-        android:id="@+id/etEmailSu"
+        android:id="@+id/etUsernameSu"
         android:layout_width="0dp"
         android:layout_height="50dp"
         android:layout_marginStart="24dp"
@@ -61,7 +61,7 @@
         app:guidelineUseRtl="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etEmail" />
+        app:layout_constraintTop_toBottomOf="@+id/etEmailSu" />
 
     <EditText
         android:id="@+id/etPasswordSu"
@@ -83,10 +83,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etEmailSu" />
+        app:layout_constraintTop_toBottomOf="@+id/etUsernameSu" />
 
     <Button
-        android:id="@+id/btn_signup"
+        android:id="@+id/btnSignupSu"
         android:layout_width="match_parent"
         android:layout_height="55dp"
         android:layout_marginStart="24dp"
@@ -115,10 +115,10 @@
         android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_signup" />
+        app:layout_constraintTop_toBottomOf="@+id/btnSignupSu" />
 
     <Button
-        android:id="@+id/btn_signin"
+        android:id="@+id/btnSigninSu"
         android:layout_width="match_parent"
         android:layout_height="55dp"
         android:layout_marginStart="24dp"

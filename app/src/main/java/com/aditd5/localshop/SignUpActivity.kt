@@ -19,24 +19,27 @@ class SignUpActivity : AppCompatActivity() {
 
         auth = FirebaseAuth.getInstance()
 
-        binding.btnSignin.setOnClickListener {
+        binding.btnSigninSu.isAllCaps = false
+        binding.btnSignupSu.isAllCaps = false
+
+        binding.btnSigninSu.setOnClickListener {
             var intent = Intent(this,SignUpActivity::class.java)
             startActivity(intent)
         }
 
-        binding.btnSignup.setOnClickListener {
-            val email = binding.etEmail.text.toString()
+        binding.btnSignupSu.setOnClickListener {
+            val email = binding.etEmailSu.text.toString()
             val password = binding.etPasswordSu.text.toString()
 
             if (email.isEmpty()) {
-                binding.etEmail.error = "Email harus diisi"
-                binding.etEmail.requestFocus()
+                binding.etEmailSu.error = "Email harus diisi"
+                binding.etEmailSu.requestFocus()
                 return@setOnClickListener
             }
 
             if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
-                binding.etEmail.error = "Email tidak valid"
-                binding.etEmail.requestFocus()
+                binding.etEmailSu.error = "Email tidak valid"
+                binding.etEmailSu.requestFocus()
                 return@setOnClickListener
             }
 

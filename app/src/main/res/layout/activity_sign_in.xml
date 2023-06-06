@@ -20,7 +20,7 @@
         android:src="@drawable/logo" />
 
     <EditText
-        android:id="@+id/etEmailSu"
+        android:id="@+id/etEmailSi"
         android:layout_width="0dp"
         android:layout_height="50dp"
         android:layout_marginStart="24dp"
@@ -41,7 +41,7 @@
         app:layout_constraintTop_toBottomOf="@+id/ivLogoSignin" />
 
     <EditText
-        android:id="@+id/etPasswordSu"
+        android:id="@+id/etPasswordSi"
         android:layout_width="0dp"
         android:layout_height="50dp"
         android:layout_marginStart="24dp"
@@ -60,10 +60,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etEmailSu" />
+        app:layout_constraintTop_toBottomOf="@+id/etEmailSi" />
 
     <Button
-        android:id="@+id/btn_signin"
+        android:id="@+id/btnSigninSi"
         android:layout_width="match_parent"
         android:layout_height="55dp"
         android:layout_marginStart="24dp"
@@ -77,7 +77,7 @@
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etPasswordSu" />
+        app:layout_constraintTop_toBottomOf="@+id/etPasswordSi" />
 
     <TextView
         android:id="@+id/textView"
@@ -92,10 +92,10 @@
         android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_signin" />
+        app:layout_constraintTop_toBottomOf="@+id/btnSigninSi" />
 
     <Button
-        android:id="@+id/btn_signupsi"
+        android:id="@+id/btnSignupSi"
         android:layout_width="match_parent"
         android:layout_height="55dp"
         android:layout_marginStart="24dp"
