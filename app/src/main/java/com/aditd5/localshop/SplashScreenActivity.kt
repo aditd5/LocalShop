@@ -4,11 +4,16 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
+import com.aditd5.localshop.home.HomeActivity
 import com.aditd5.localshop.databinding.ActivitySplashScreenBinding
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 
 class SplashScreenActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivitySplashScreenBinding
+    private lateinit var auth: FirebaseAuth
 
     private val  SPLASH_TIME_OUT = 3000L
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -16,22 +21,17 @@ class SplashScreenActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
 
+        auth = Firebase.auth
+
         Handler().postDelayed({
-            checkLoginStatus()
+            val currentUser = auth.currentUser
+            if (currentUser != null) {
+                val intent = Intent(this,HomeActivity::class.java)
+                startActivity(intent)
+            } else {
+                val intent = Intent(this,SignInActivity::class.java)
+                startActivity(intent)
+            }
         },SPLASH_TIME_OUT)
-    }
-
-    private fun checkLoginStatus() {
-        val sharedPreferences = getSharedPreferences("login_pref", MODE_PRIVATE)
-        val isLoggedIn = sharedPreferences.getBoolean("is_logged_in",false)
-
-        val intent = if (isLoggedIn) {
-            Intent(this,HomeActivity::class.java)
-
-        } else {
-            Intent(this,SignInActivity::class.java)
-        }
-        startActivity(intent)
-        finish()
     }
 }
