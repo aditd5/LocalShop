@@ -1,14 +1,12 @@
-package com.aditd5.localshop
+package com.aditd5.localshop.activity
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Patterns
-import android.widget.Button
-import android.widget.EditText
 import android.widget.Toast
 import com.aditd5.localshop.databinding.ActivitySignInBinding
-import com.aditd5.localshop.home.HomeActivity
+import com.aditd5.localshop.activity.home.HomeActivity
 import com.google.firebase.auth.FirebaseAuth
 
 class SignInActivity : AppCompatActivity() {
@@ -24,7 +22,7 @@ class SignInActivity : AppCompatActivity() {
         auth = FirebaseAuth.getInstance()
 
        binding.btnSignup.setOnClickListener {
-            val intent = Intent(this,SignUpActivity::class.java)
+            val intent = Intent(this, SignUpActivity::class.java)
             startActivity(intent)
         }
 

@@ -1,10 +1,10 @@
-package com.aditd5.localshop
+package com.aditd5.localshop.activity
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
-import com.aditd5.localshop.home.HomeActivity
+import com.aditd5.localshop.activity.home.HomeActivity
 import com.aditd5.localshop.databinding.ActivitySplashScreenBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
@@ -26,10 +26,10 @@ class SplashScreenActivity : AppCompatActivity() {
         Handler().postDelayed({
             val currentUser = auth.currentUser
             if (currentUser != null) {
-                val intent = Intent(this,HomeActivity::class.java)
+                val intent = Intent(this, HomeActivity::class.java)
                 startActivity(intent)
             } else {
-                val intent = Intent(this,SignInActivity::class.java)
+                val intent = Intent(this, SignInActivity::class.java)
                 startActivity(intent)
             }
         },SPLASH_TIME_OUT)

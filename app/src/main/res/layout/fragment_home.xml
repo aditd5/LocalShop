@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".home.HomeFragment">
+    tools:context=".activity.home.HomeFragment">
 
     <ImageView
         android:id="@+id/imageView4"
@@ -93,7 +93,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView6"
-        tools:listitem="@layout/card_category" />
+        tools:listitem="@layout/card_produk" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

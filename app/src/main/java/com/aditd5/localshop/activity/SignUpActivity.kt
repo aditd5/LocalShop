@@ -1,11 +1,9 @@
-package com.aditd5.localshop
+package com.aditd5.localshop.activity
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Patterns
-import android.widget.Button
-import android.widget.EditText
 import android.widget.Toast
 import com.aditd5.localshop.databinding.ActivitySignUpBinding
 import com.google.firebase.auth.FirebaseAuth
@@ -23,10 +21,10 @@ class SignUpActivity : AppCompatActivity() {
 
         auth = FirebaseAuth.getInstance()
 
-        binding.btnSignin.setOnClickListener {
-            var intent = Intent(this,SignInActivity::class.java)
-            startActivity(intent)
-        }
+//        binding.btnSignin.setOnClickListener {
+//            var intent = Intent(this, SignInActivity::class.java)
+//            startActivity(intent)
+//        }
 
         binding.btnSignup.setOnClickListener {
             val email = binding.etEmail.text.toString()
@@ -58,7 +56,7 @@ class SignUpActivity : AppCompatActivity() {
             .addOnCompleteListener(this) {
                 if (it.isSuccessful) {
                     Toast.makeText(this,"Berhasil membuat akun",Toast.LENGTH_SHORT).show()
-                    var intent = Intent(this,SignInActivity::class.java)
+                    var intent = Intent(this, SignInActivity::class.java)
                     startActivity(intent)
                 } else {
                     Toast.makeText(this,"${it.exception?.message}",Toast.LENGTH_SHORT).show()

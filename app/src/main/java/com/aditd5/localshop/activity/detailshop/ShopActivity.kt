@@ -1,4 +1,4 @@
-package com.aditd5.localshop.detailshop
+package com.aditd5.localshop.activity.detailshop
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

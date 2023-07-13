@@ -1,4 +1,4 @@
-package com.aditd5.localshop
+package com.aditd5.localshop.activity
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -14,7 +14,7 @@ class ItemCategoryActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.btnBack.setOnClickListener {
-            val intent = Intent(this,DetailCategoryActivity::class.java)
+            val intent = Intent(this, DetailCategoryActivity::class.java)
             startActivity(intent)
         }
     }
