@@ -1,5 +1,6 @@
 package com.aditd5.localshop.activity.home
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
@@ -7,6 +8,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.aditd5.localshop.ProductActivity
+import com.aditd5.localshop.R
+import com.aditd5.localshop.activity.MapsFragment
 //import com.aditd5.localshop.data.HomeCategory
 import com.aditd5.localshop.adapter.ProdukAdapter
 import com.aditd5.localshop.api.APIConfig
@@ -23,12 +27,10 @@ import retrofit2.Response
 
 class HomeFragment : Fragment() {
 
-//    private val apiRetrofit by lazy { APIRetrofit().endpoint }
-
     private var _binding: FragmentHomeBinding? = null
     private val binding get() = _binding!!
 
-    private lateinit var produkAdapter: ProdukAdapter
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -44,36 +46,16 @@ class HomeFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-//        binding.rvKategori.layoutManager = LinearLayoutManager(context)
-//        binding.rvKategori.setHasFixedSize(true)
-//        binding.rvKategori.adapter = produkAdapter
-        produkAdapter = ProdukAdapter(arrayListOf())
-        binding.rvKategori.adapter = produkAdapter
-        retrieveData()
-    }
 
-    private fun retrieveData() {
-        APIConfig.apiInstance.dataProduk().enqueue(object : Callback<ProdukResponse> {
-            override fun onResponse(
-                call: Call<ProdukResponse>,
-                response: Response<ProdukResponse>) {
+        binding.btnProduct.setOnClickListener {
+            val intent = Intent(context, ProductActivity::class.java)
+            startActivity(intent)
+        }
 
-                if (response.isSuccessful) {
-                    var produkResponse = response.body()
-                    var produkData = produkResponse?.data
-                    var produkAdapter = ProdukAdapter(produkData as List<ProdukData>)
-                    binding.rvKategori.apply {
-                        layoutManager = LinearLayoutManager(context)
-                        setHasFixedSize(true)
-                        produkAdapter.notifyDataSetChanged()
-                        adapter = produkAdapter
-                    }
-                }
-            }
-
-            override fun onFailure(call: Call<ProdukResponse>, t: Throwable) {
-                Log.e("HomeFragment", t.printStackTrace().toString())
-            }
-        })
+        binding.ivMaps.setOnClickListener {
+            val transaction = requireActivity().supportFragmentManager.beginTransaction()
+            transaction.replace(R.id.fragment_home_content, MapsFragment())
+            transaction.commit()
+        }
     }
 }

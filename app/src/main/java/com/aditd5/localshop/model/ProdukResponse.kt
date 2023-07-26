@@ -1,41 +1,28 @@
 package com.aditd5.localshop.model
 
-import android.os.Parcelable
-import com.google.gson.annotations.SerializedName
-import kotlinx.parcelize.Parcelize
 
-@Parcelize
+
 data class ProdukResponse (
 
-    @field:SerializedName("result")
-    val data: List<ProdukData?>? = null,
+    val data: List<ProdukData>,
 
-    @field:SerializedName("kode")
-    val kode: Int = 0,
+    val kode: Int,
 
-    @field:SerializedName("pesan")
-    val pesan: String? = null
-) : Parcelable
+    val pesan: String
+)
 
 
-@Parcelize
 data class ProdukData(
 
-    @field:SerializedName("id")
-    var id: Int = 0,
+    var id: Int,
 
-    @field:SerializedName("nama")
-    var nama: String? = null,
+    var nama: String,
 
-    @field:SerializedName("jenis")
-    var jenis: String? = null,
+    var jenis: String,
 
-    @field:SerializedName("jumlah")
-    var jumlah: String?  = null,
+    var jumlah: String,
 
-    @field:SerializedName("harga")
-    var harga: String?  = null,
+    var harga: String,
 
-    @field:SerializedName("url")
-    var url: String?  = null
-) : Parcelable
+    var url: String
+)

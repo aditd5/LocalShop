@@ -21,5 +21,6 @@
     <string name="jumlah">Jumlah</string>
     <string name="harga">Harga</string>
     <string name="url">Url</string>
+    <string name="selamat_datang">Selamat Datang User</string>
     <!-- TODO: Remove or change this placeholder text -->
 </resources>

@@ -23,7 +23,7 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="32dp"
         android:fontFamily="@font/roboto"
-        android:text="Selamat datang Arya"
+        android:text="@string/selamat_datang"
         android:textColor="@color/white"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -53,7 +53,7 @@
         app:srcCompat="@drawable/promotion" />
 
     <ImageView
-        android:id="@+id/imageView7"
+        android:id="@+id/ivMaps"
         android:layout_width="0dp"
         android:layout_height="85dp"
         android:layout_marginStart="24dp"
@@ -78,22 +78,20 @@
         android:textColor="@color/white"
         android:textSize="12sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView7" />
+        app:layout_constraintTop_toBottomOf="@+id/ivMaps" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_kategori"
+    <Button
+        android:id="@+id/btnProduct"
         android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginBottom="24dp"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        android:background="@color/green"
+        android:text="Lihat Produk"
+        android:gravity="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView6"
-        tools:listitem="@layout/card_produk" />
-
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
