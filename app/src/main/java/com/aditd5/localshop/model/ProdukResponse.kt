@@ -24,5 +24,13 @@ data class ProdukData(
 
     var harga: String,
 
-    var url: String
+    var rating: String,
+
+    var detail: String,
+
+    var penawaran: String,
+
+    var url: String,
+
+    var link: String,
 )

@@ -24,11 +24,9 @@ class ProdukAdapter(
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val produkModel = listProduk[position]
-        holder.Id.text = produkModel.id.toString()
         holder.Nama.text = produkModel.nama
-        holder.Jenis.text = produkModel.jenis
-        holder.Jumlah.text = produkModel.jumlah
-        holder.Harga.text = produkModel.harga
+        holder.Rating.text = produkModel.rating
+        holder.Harga.text = ("Rp " + produkModel.harga)
 
         Picasso.get()
             .load(produkModel.url)
@@ -42,12 +40,10 @@ class ProdukAdapter(
     }
 
     inner class ViewHolder(view: View): RecyclerView.ViewHolder(view) {
-        var Id: TextView = view.findViewById(R.id.tv_id)
         var Nama: TextView = view.findViewById(R.id.tv_nama)
-        var Jenis: TextView = view.findViewById(R.id.tv_jenis)
-        var Jumlah: TextView = view.findViewById(R.id.tv_jumlah)
         var Harga: TextView = view.findViewById(R.id.tv_harga)
         var Foto: ImageView = view.findViewById(R.id.iv_produk)
+        var Rating: TextView = view.findViewById(R.id.tv_rating)
     }
 }
 

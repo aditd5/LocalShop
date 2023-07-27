@@ -1,4 +1,4 @@
-package com.aditd5.localshop
+package com.aditd5.localshop.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -39,7 +39,6 @@ class ProductActivity : AppCompatActivity() {
                     Log.e("produkData", produkData.toString())
                     val produkAdapter = produkData?.let { ProdukAdapter(it) }
                     binding.rvKategori.apply {
-//                        layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
                         layoutManager = GridLayoutManager(context, 2)
                         adapter = produkAdapter
                     }

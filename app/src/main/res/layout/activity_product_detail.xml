@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/grey"
-    tools:context=".activity.ProductDetailActivity">
+    tools:context=".activity.DetailProductActivity">
 
     <ImageView
         android:id="@+id/iv_detail_product"
@@ -16,12 +16,12 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@tools:sample/backgrounds/scenic" />
+        tools:srcCompat="@drawable/ic_launcher_background" />
 
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="0dp"
-        android:layout_height="250dp"
+        android:layout_height="230dp"
         android:outlineProvider="bounds"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -32,7 +32,9 @@
         android:id="@+id/imageView10"
         android:layout_width="0dp"
         android:layout_height="210dp"
+        android:layout_marginTop="8dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView2"
         app:srcCompat="@drawable/background_white" />
@@ -41,7 +43,7 @@
         android:id="@+id/tv_product_price"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="2dp"
         android:fontFamily="@font/roboto_medium"
         android:text="Rp 14.000"
@@ -54,8 +56,8 @@
         android:id="@+id/tv_product_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
         android:fontFamily="@font/roboto_medium"
         android:text="Nasi Goreng Ayam Spesial"
         android:textColor="@color/black"
@@ -64,191 +66,96 @@
         app:layout_constraintTop_toBottomOf="@+id/iv_detail_product" />
 
     <TextView
-        android:id="@+id/tv_total"
-        android:layout_width="wrap_content"
+        android:id="@+id/tv_penawaran"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
-        android:fontFamily="@font/roboto"
-        android:text="8RB+ Terjual"
-        android:textColor="@color/black"
-        android:textSize="10sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_product_price" />
-
-    <TextView
-        android:id="@+id/textview8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="16dp"
-        android:drawableLeft="@drawable/ic_check"
-        android:drawablePadding="5dp"
-        android:fontFamily="@font/roboto"
-        android:gravity="center"
-        android:includeFontPadding="true"
-        android:paddingEnd="5dp"
-        android:text="Pesan antar"
-        android:textColor="@color/black"
-        android:textSize="12sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textview7" />
-
-    <TextView
-        android:id="@+id/textview2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="16dp"
-        android:drawableLeft="@drawable/ic_check"
-        android:drawablePadding="5dp"
-        android:fontFamily="@font/roboto"
-        android:gravity="center"
-        android:includeFontPadding="true"
-        android:paddingEnd="5dp"
-        android:text="Bawa pulang"
-        android:textColor="@color/black"
-        android:textSize="12sp"
-        app:layout_constraintStart_toEndOf="@+id/textview8"
-        app:layout_constraintTop_toBottomOf="@+id/textview7" />
-
-    <TextView
-        android:id="@+id/textview"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
         android:drawableLeft="@drawable/ic_discount"
         android:drawablePadding="5dp"
         android:fontFamily="@font/roboto"
-        android:gravity="center"
+        android:gravity="center|left"
         android:includeFontPadding="true"
         android:paddingEnd="5dp"
         android:text="Diskon 10% Hari Jum’at"
         android:textColor="@color/black"
-        android:textSize="12sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textview3" />
-
-    <TextView
-        android:id="@+id/textview5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="24dp"
-        android:drawableLeft="@drawable/ic_halal"
-        android:drawablePadding="5dp"
-        android:fontFamily="@font/roboto"
-        android:gravity="center"
-        android:includeFontPadding="true"
-        android:paddingEnd="5dp"
-        android:text="Halal"
-        android:textColor="@color/black"
-        android:textSize="12sp"
+        android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textview3" />
-
-    <TextView
-        android:id="@+id/textview4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="8dp"
-        android:drawableLeft="@drawable/ic_check"
-        android:drawablePadding="5dp"
-        android:fontFamily="@font/roboto"
-        android:gravity="center"
-        android:includeFontPadding="true"
-        android:paddingEnd="5dp"
-        android:text="Makan ditempat"
-        android:textColor="@color/black"
-        android:textSize="12sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textview8" />
+        app:layout_constraintTop_toBottomOf="@+id/textview3" />
 
     <TextView
         android:id="@+id/textview7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="24dp"
         android:fontFamily="@font/roboto_medium"
         android:text="Detail Layanan"
         android:textColor="@color/black"
         android:textSize="14sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_total" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_rating" />
 
     <TextView
         android:id="@+id/textview3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="22dp"
         android:fontFamily="@font/roboto_medium"
         android:text="Penawaran"
         android:textColor="@color/black"
         android:textSize="14sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textview4" />
+        app:layout_constraintTop_toTopOf="@+id/imageView10" />
 
     <TextView
         android:id="@+id/tv_rating"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
-        android:drawableRight="@drawable/ic_star"
-        android:drawablePadding="5dp"
+        android:drawableLeft="@drawable/ic_star"
+        android:drawablePadding="2dp"
         android:fontFamily="@font/roboto"
+        android:gravity="center"
         android:text="4.7"
         android:textColor="@color/black"
-        android:textSize="10sp"
-        app:layout_constraintStart_toEndOf="@+id/tv_total"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_product_price" />
-
-    <TextView
-        android:id="@+id/tv_product_desc"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="24dp"
-        android:text="Nasi goreng ayam spesial dibuat dengan bahan-bahan pilihan yang berkualitas dan diolah secara higienis"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textview" />
-
-    <Button
-        android:id="@+id/btn_shop"
-        android:layout_width="190dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="24dp"
-        android:background="@drawable/btn_large"
-        android:fontFamily="@font/roboto_medium"
-        android:gravity="center"
-        android:text="Lihat toko"
-        android:textColor="@color/white"
-        android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_product_desc" />
 
     <Button
         android:id="@id/btn_buy"
         android:layout_width="match_parent"
         android:layout_height="55dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="24dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="24dp"
         android:background="@drawable/btn_large"
         android:fontFamily="@font/roboto_bold"
         android:gravity="center"
         android:text="Pesan"
         android:textColor="@color/white"
         android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_detail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/roboto"
+        android:text="Nasi goreng enak"
+        android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_shop" />
+        app:layout_constraintTop_toBottomOf="@+id/textview7" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

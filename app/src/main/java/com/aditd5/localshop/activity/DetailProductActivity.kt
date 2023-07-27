@@ -6,7 +6,7 @@ import com.aditd5.localshop.databinding.ActivityProductDetailBinding
 
 private lateinit var binding: ActivityProductDetailBinding
 
-class ProductDetailActivity : AppCompatActivity() {
+class DetailProductActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         binding = ActivityProductDetailBinding.inflate(layoutInflater)
         super.onCreate(savedInstanceState)

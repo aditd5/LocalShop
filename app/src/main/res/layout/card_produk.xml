@@ -16,44 +16,54 @@
             android:id="@+id/iv_produk"
             android:layout_width="match_parent"
             android:layout_height="170dp"
-            android:src="@drawable/ic_drink" />
+            android:src="@drawable/ic_launcher_background" />
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:layout_margin="6dp">
 
             <TextView
-                android:id="@+id/tv_id"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:visibility="gone"
-                tools:text="id"/>
-
-            <TextView
                 android:id="@+id/tv_nama"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                tools:text="Nama"/>
+                android:fontFamily="@font/roboto_bold"
+                android:gravity="left"
+                android:textSize="16sp"
+                tools:text="Nama" />
 
             <TextView
-                android:id="@+id/tv_jenis"
+                android:id="@+id/textview2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                tools:text="@string/jenis" />
-
-            <TextView
-                android:id="@+id/tv_jumlah"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                tools:text="@string/jumlah" />
+                android:fontFamily="@font/roboto_medium"
+                android:textSize="14sp"
+                android:layout_marginTop="5dp"
+                android:gravity="left"
+                android:text="@string/tersedia" />
 
             <TextView
                 android:id="@+id/tv_harga"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginTop="5dp"
+                android:textSize="12sp"
+                android:fontFamily="@font/roboto_medium"
                 tools:text="@string/harga" />
+
+            <TextView
+                android:id="@+id/tv_rating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:drawableLeft="@drawable/ic_star"
+                android:drawablePadding="5dp"
+                android:layout_marginTop="5dp"
+                android:textSize="14sp"
+                android:fontFamily="@font/roboto_medium"
+                tools:text="Rating" />
         </LinearLayout>
     </LinearLayout>
 

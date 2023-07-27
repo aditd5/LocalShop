@@ -22,5 +22,6 @@
     <string name="harga">Harga</string>
     <string name="url">Url</string>
     <string name="selamat_datang">Selamat Datang User</string>
+    <string name="tersedia">Tersedia</string>
     <!-- TODO: Remove or change this placeholder text -->
 </resources>
