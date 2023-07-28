@@ -22,8 +22,13 @@ class ProductActivity : AppCompatActivity() {
         binding = ActivityProductBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+       setupData()
+    }
+
+    private fun setupData() {
         produkAdapter = ProdukAdapter(arrayListOf())
         binding.rvKategori.adapter = produkAdapter
+
         retrieveData()
     }
 

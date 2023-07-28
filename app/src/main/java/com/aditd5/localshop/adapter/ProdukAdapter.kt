@@ -33,6 +33,10 @@ class ProdukAdapter(
             .resize(150, 150)
             .centerCrop()
             .into(holder.Foto)
+
+        holder.Foto.setOnClickListener {
+
+        }
     }
 
     override fun getItemCount(): Int {
