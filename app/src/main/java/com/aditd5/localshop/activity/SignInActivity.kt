@@ -60,6 +60,7 @@ class SignInActivity : AppCompatActivity() {
                     Toast.makeText(this,"Selamat datang", Toast.LENGTH_SHORT).show()
                     var intent = Intent(this, HomeActivity::class.java)
                     startActivity(intent)
+                    finishAffinity()
                 } else {
                     Toast.makeText(this,"User tidak ditemukan", Toast.LENGTH_SHORT).show()
                 }
